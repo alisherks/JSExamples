@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <div class="container">
+      <p id="count"></p>
+      <button onclick="increment()">
+        +
+      </button>
+      <button onclick="decrement()">
+        -
+      </button>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: auto;
+      }
+      .container p {
+        text-align: center;
+        width: 100%;
+      }
+      .container button {
+        flex-grow: 1;
+      }
+    </style>
+    <script>
+      let count = 0;
+      const countParagraph = document.getElementById("count");
+      
+      function increment() {
+        count = count + 1;
+        countParagraph.innerHTML = count;
+      }
+      
+      function decrement() {
+        count = count - 1;
+        countParagraph.innerHTML = count;
+      }
+
+      countParagraph.innerHTML = count;
+    </script>
+  </body>
+</html>
